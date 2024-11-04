@@ -1,0 +1,187 @@
+{
+    "main": "index.js",
+    "id": "",
+    "name": "QuirkAssistDX",
+    "author": "FlaingK",
+    "authorId": "",
+    "authorLink": "",
+    "version": "0.0.1",
+    "description": "A pluigin that adds a quirk to your message after you hit send!",
+    "website": "https://flaringk.github.io/",
+    "source": "",
+    "patreon": "",
+    "donate": "",
+    "invite": "",
+    "changelog": [],
+    "defaultConfig": [
+        {
+            "id": "character1",
+            "name": "Custom Quirk 1",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [
+                {
+                    "type": "textbox",
+                    "id": "proxy",
+                    "name": "Quirk Proxy (Example: 'GC: text')",
+                    "value": ""
+                },
+                {
+                    "type": "switch",
+                    "id": "keepProxy",
+                    "name": "Keep proxy after sending message?",
+                    "value": true
+                },
+                {
+                    "type": "textbox",
+                    "id": "find",
+                    "name": "Quirk find list",
+                    "value": ""
+                },
+                {
+                    "type": "textbox",
+                    "id": "replace",
+                    "name": "Quirk replace list",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "id": "character2",
+            "name": "Custom Quirk 2",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character3",
+            "name": "Custom Quirk 3",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character4",
+            "name": "Custom Quirk 4",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character5",
+            "name": "Custom Quirk 5",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character6",
+            "name": "Custom Quirk 6",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character7",
+            "name": "Custom Quirk 7",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character8",
+            "name": "Custom Quirk 8",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character9",
+            "name": "Custom Quirk 9",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character10",
+            "name": "Custom Quirk 10",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character11",
+            "name": "Custom Quirk 11",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character12",
+            "name": "Custom Quirk 12",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character13",
+            "name": "Custom Quirk 13",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character14",
+            "name": "Custom Quirk 14",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character15",
+            "name": "Custom Quirk 15",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character16",
+            "name": "Custom Quirk 16",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character17",
+            "name": "Custom Quirk 17",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character18",
+            "name": "Custom Quirk 18",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character19",
+            "name": "Custom Quirk 19",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character20",
+            "name": "Custom Quirk 20",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character21",
+            "name": "Custom Quirk 21",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character22",
+            "name": "Custom Quirk 22",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character23",
+            "name": "Custom Quirk 23",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        },
+        {
+            "id": "character24",
+            "name": "Custom Quirk 24",
+            "collapsible": true, "type": "category", "shown": false,
+            "settings": [{"type":"textbox","id":"proxy","name":"Quirk Proxy (Example: 'GC: text')","value":""},{"type":"switch","id":"keepProxy","name":"Keep proxy after sending message?","value":true},{"type":"textbox","id":"find","name":"Quirk find list","value":""},{"type":"textbox","id":"replace","name":"Quirk replace list","value":""}]
+        }
+    ]
+}
