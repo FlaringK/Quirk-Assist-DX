@@ -1,7 +1,7 @@
 /**
  * @name QuirkAssistDX
  * @description A pluigin that adds a quirk to your message after you hit send!
- * @version 0.1.1
+ * @version 0.2.1
  * @author FlaingK
  * @website https://flaringk.github.io/
  * @source https://github.com/FlaringK/Quirk-Assist-DX
@@ -36,15 +36,36 @@ const config = {
     author: "FlaingK",
     authorId: "",
     authorLink: "",
-    version: "0.1.1",
+    version: "0.2.1",
     description: "A pluigin that adds a quirk to your message after you hit send!",
     website: "https://flaringk.github.io/",
     source: "https://github.com/FlaringK/Quirk-Assist-DX",
     patreon: "",
     donate: "",
     invite: "",
-    changelog: [],
+    changelog: [
+        {
+            title: "New Stuff",
+            items: [
+                "Added global and per auto latch, you can escape these with \\ and \\\\\\\\"
+            ]
+        },
+        {
+            title: "Bugs Squashed",
+            type: "fixed",
+            items: [
+                "Fixed bug where quirks 10-24 did not work",
+                "Fixed bug when find and replace list weren't the same size"
+            ]
+        }
+    ],
     defaultConfig: [
+        {
+            type: "switch",
+            id: "autoProxy",
+            name: "Auto Latch for All Proxies",
+            value: false
+        },
         {
             id: "character1",
             name: "Custom Quirk 1",
@@ -63,6 +84,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -98,6 +125,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -129,6 +162,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -164,6 +203,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -195,6 +240,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -230,6 +281,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -261,6 +318,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -296,6 +359,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -327,6 +396,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -362,6 +437,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -393,6 +474,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -428,6 +515,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -459,6 +552,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -494,6 +593,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -525,6 +630,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -560,6 +671,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -591,6 +708,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -626,6 +749,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -657,6 +786,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -692,6 +827,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -723,6 +864,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -758,6 +905,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -791,6 +944,12 @@ const config = {
                     value: true
                 },
                 {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
+                },
+                {
                     type: "textbox",
                     id: "find",
                     name: "Find list",
@@ -822,6 +981,12 @@ const config = {
                     id: "keepProxy",
                     name: "Keep proxy after sending message?",
                     value: true
+                },
+                {
+                    type: "switch",
+                    id: "autoProxy",
+                    name: "Auto Latch for this proxy only",
+                    value: false
                 },
                 {
                     type: "textbox",
@@ -874,8 +1039,11 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
     
     return class extends Plugin {
 
+
+
         async onStart() {
             console.log("Quirk Assist DX Active!")
+            this.currentQuirk = 0
             Patcher.before(this.name, DiscordModules.MessageActions, "sendMessage", (_, [, msg]) => {
                 msg.content = this.format(msg.content);
             });
@@ -894,7 +1062,21 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
 
             let outString = inString.trim()
 
-            for (let i = 0; i < 9; i++) {
+            // Reset quirk if no latch or if string starts with /
+            console.log(this.currentQuirk)
+            if (this.currentQuirk !== 0 && !this.settings.autoProxy) {
+                if (!this.settings["character" + this.currentQuirk].autoProxy) {
+                    this.currentQuirk = 0
+                }
+            }
+
+            if (outString.startsWith("\\\\")) { // Two backslashes turn off latch
+                this.currentQuirk = 0
+            } else if (outString.startsWith("\\")) { // One backslash turns off quirk for single message
+                return outString
+            }
+
+            for (let i = 0; i < 24; i++) {
                 const index = i + 1
                 const character = this.settings["character" + index]
                 const proxy = character.proxy.trim()
@@ -908,16 +1090,33 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
                 if (!(outString.startsWith(start) && outString.endsWith(end))) { continue }
 
                 console.log("Valid quirk Message! " + index)
+                this.currentQuirk = index
+
+                // Don't repeat loop this if a quirk is found
+                break;
+
+            }
+
+            // Apply quirk
+            if (this.currentQuirk) {
+                const character = this.settings["character" + this.currentQuirk]
+                const proxy = character.proxy.trim()
+                const [start, end] = proxy.split("text", 2)
 
                 // Get string without proxy
-                outString = outString.slice(start.length, outString.length - end.length)
+                if (outString.startsWith(start) && outString.endsWith(end)) {
+                    outString = outString.slice(start.length, outString.length - end.length)
+                }
 
                 // find and replace have the same size
                 let finds = this.splitByComma(character.find)
                 let replaces = this.splitByComma(character.replace)
 
-                finds.length = replaces.length
-                replaces.length = finds.length
+                if (finds.length > replaces.length) {
+                    finds.length = replaces.length
+                } else {
+                    replaces.length = finds.length
+                }
 
                 // Do the quirk swap
                 finds.forEach((find, j) => {
@@ -929,10 +1128,6 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
                 if (character.keepProxy) {
                     outString = start + outString + end
                 }
-
-                // Don't repeat loop this if a quirk is found
-                break;
-
             }
 
             return outString

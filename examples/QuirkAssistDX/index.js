@@ -13,8 +13,11 @@ module.exports = (Plugin, Library) => {
     
     return class extends Plugin {
 
+
+
         async onStart() {
             console.log("Quirk Assist DX Active!")
+            this.currentQuirk = 0
             Patcher.before(this.name, DiscordModules.MessageActions, "sendMessage", (_, [, msg]) => {
                 msg.content = this.format(msg.content);
             });
@@ -33,7 +36,21 @@ module.exports = (Plugin, Library) => {
 
             let outString = inString.trim()
 
-            for (let i = 0; i < 9; i++) {
+            // Reset quirk if no latch or if string starts with /
+            console.log(this.currentQuirk)
+            if (this.currentQuirk !== 0 && !this.settings.autoProxy) {
+                if (!this.settings["character" + this.currentQuirk].autoProxy) {
+                    this.currentQuirk = 0
+                }
+            }
+
+            if (outString.startsWith("\\\\")) { // Two backslashes turn off latch
+                this.currentQuirk = 0
+            } else if (outString.startsWith("\\")) { // One backslash turns off quirk for single message
+                return outString
+            }
+
+            for (let i = 0; i < 24; i++) {
                 const index = i + 1
                 const character = this.settings["character" + index]
                 const proxy = character.proxy.trim()
@@ -47,16 +64,33 @@ module.exports = (Plugin, Library) => {
                 if (!(outString.startsWith(start) && outString.endsWith(end))) { continue }
 
                 console.log("Valid quirk Message! " + index)
+                this.currentQuirk = index
+
+                // Don't repeat loop this if a quirk is found
+                break;
+
+            }
+
+            // Apply quirk
+            if (this.currentQuirk) {
+                const character = this.settings["character" + this.currentQuirk]
+                const proxy = character.proxy.trim()
+                const [start, end] = proxy.split("text", 2)
 
                 // Get string without proxy
-                outString = outString.slice(start.length, outString.length - end.length)
+                if (outString.startsWith(start) && outString.endsWith(end)) {
+                    outString = outString.slice(start.length, outString.length - end.length)
+                }
 
                 // find and replace have the same size
                 let finds = this.splitByComma(character.find)
                 let replaces = this.splitByComma(character.replace)
 
-                finds.length = replaces.length
-                replaces.length = finds.length
+                if (finds.length > replaces.length) {
+                    finds.length = replaces.length
+                } else {
+                    replaces.length = finds.length
+                }
 
                 // Do the quirk swap
                 finds.forEach((find, j) => {
@@ -68,10 +102,6 @@ module.exports = (Plugin, Library) => {
                 if (character.keepProxy) {
                     outString = start + outString + end
                 }
-
-                // Don't repeat loop this if a quirk is found
-                break;
-
             }
 
             return outString

@@ -9,7 +9,7 @@ This plugin edits the contents of your message before it's sent to discords serv
 
 ## Using Qurik Assist DX 
 
-Once you place the QuirkAssistDX.plugin.js file into your plugin folder and active it, if you open it's settings there will be 24 custom quirks for you to make. Each quirk has four fields for you to change, the first being preloaded with an example quirk. The four fields are:
+Once you place the QuirkAssistDX.plugin.js file into your plugin folder and active it, if you open it's settings there will be 24 custom quirks for you to make. Each quirk has fields for you to change, the first being preloaded with an example quirk. The fields are:
 
 ### Proxy Tag
 This this is the proxy that your message will have to match for a quirk to be applied to it, akin to [PluralKit](https://pluralkit.me/). Often, these will be a pair of brackets, an emoji prefix, or something similar.
@@ -25,6 +25,9 @@ text -Q
 
 ### Keep proxy after sending message?
 By default the proxy tag you use with the message will not be removed, setting this will remove or keep the proxy tag as part of the message you send to discord.
+
+### Auto Latch for this proxy only
+This will cause your quirk to be applied to all your messages after you use your proxy once. You can turn off the latch with a backslash for a single message or a double backslash to turn off the quirk completely
 
 ### Find list & Replace list
 This is the bread and butter of this plugin. Each quirk has a list of text it will find, and list of text it will replace with the corresponding found text. Each list is seperated by commas. For exmaple: a quirk's find list could be:
