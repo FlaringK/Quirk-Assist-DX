@@ -30,6 +30,7 @@ module.exports = (Plugin, Library) => {
         }
 
         format(inString) {
+
             let outString = inString.trim()
 
             for (let i = 0; i < 9; i++) {

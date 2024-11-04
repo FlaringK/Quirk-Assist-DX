@@ -1,8 +1,10 @@
 /**
  * @name QuirkAssistDX
- * @description Testing
- * @version 0.0.1
+ * @description A pluigin that adds a quirk to your message after you hit send!
+ * @version 0.1.1
  * @author FlaingK
+ * @website https://flaringk.github.io/
+ * @source https://github.com/FlaringK/Quirk-Assist-DX
  */
 /*@cc_on
 @if (@_jscript)
@@ -34,10 +36,10 @@ const config = {
     author: "FlaingK",
     authorId: "",
     authorLink: "",
-    version: "0.0.1",
-    description: "Testing",
-    website: "",
-    source: "",
+    version: "0.1.1",
+    description: "A pluigin that adds a quirk to your message after you hit send!",
+    website: "https://flaringk.github.io/",
+    source: "https://github.com/FlaringK/Quirk-Assist-DX",
     patreon: "",
     donate: "",
     invite: "",
@@ -53,8 +55,8 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
-                    value: ""
+                    name: "Proxy Tag",
+                    value: "GC: text"
                 },
                 {
                     type: "switch",
@@ -65,14 +67,14 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
-                    value: ""
+                    name: "Find list",
+                    value: "/([a-z])/g,A,I,E"
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
-                    value: ""
+                    name: "Replace list",
+                    value: "upper($1),4,1,3"
                 }
             ]
         },
@@ -86,7 +88,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -98,13 +100,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -119,7 +121,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -131,13 +133,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -152,7 +154,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -164,13 +166,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -185,7 +187,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -197,13 +199,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -218,7 +220,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -230,13 +232,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -251,7 +253,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -263,13 +265,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -284,7 +286,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -296,13 +298,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -317,7 +319,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -329,13 +331,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -350,7 +352,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -362,13 +364,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -383,7 +385,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -395,13 +397,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -416,7 +418,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -428,13 +430,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -449,7 +451,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -461,13 +463,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -482,7 +484,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -494,13 +496,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -515,7 +517,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -527,13 +529,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -548,7 +550,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -560,13 +562,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -581,7 +583,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -593,13 +595,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -614,7 +616,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -626,13 +628,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -647,7 +649,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -659,13 +661,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -680,7 +682,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -692,13 +694,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -713,7 +715,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -725,13 +727,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -746,7 +748,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -758,13 +760,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -779,7 +781,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -791,13 +793,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -812,7 +814,7 @@ const config = {
                 {
                     type: "textbox",
                     id: "proxy",
-                    name: "Quirk Proxy (Example: 'GC: text')",
+                    name: "Proxy Tag",
                     value: ""
                 },
                 {
@@ -824,13 +826,13 @@ const config = {
                 {
                     type: "textbox",
                     id: "find",
-                    name: "Quirk find list",
+                    name: "Find list",
                     value: ""
                 },
                 {
                     type: "textbox",
                     id: "replace",
-                    name: "Quirk replace list",
+                    name: "Replace list",
                     value: ""
                 }
             ]
@@ -889,6 +891,7 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
         }
 
         format(inString) {
+
             let outString = inString.trim()
 
             for (let i = 0; i < 9; i++) {
