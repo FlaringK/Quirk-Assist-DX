@@ -1,7 +1,7 @@
 /**
  * @name QuirkAssistDX
  * @description A pluigin that adds a quirk to your message after you hit send!
- * @version 0.2.1
+ * @version 0.2.0
  * @author FlaingK
  * @website https://flaringk.github.io/
  * @source https://github.com/FlaringK/Quirk-Assist-DX
@@ -36,7 +36,7 @@ const config = {
     author: "FlaingK",
     authorId: "",
     authorLink: "",
-    version: "0.2.1",
+    version: "0.2.0",
     description: "A pluigin that adds a quirk to your message after you hit send!",
     website: "https://flaringk.github.io/",
     source: "https://github.com/FlaringK/Quirk-Assist-DX",
