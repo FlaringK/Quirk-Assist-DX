@@ -38,7 +38,7 @@ and it's replace list could be:
 Then, when you send a message with the correct proxy, the quirk would look at the first element in the find list, "A", and replace all the "A"s with the first element in the replace list, "4". Then it would get the next element in the find list, "I", and replace them with "1"s, and same for teh "E"s and the "3"s.
 
 Tips:
-- If you want to use a comma as part of a find or replace, you can use a backslash before a comma to escape it: \,
+- If you want to use a comma as part of a find or replace, you can use a backslash before a comma to escape it: \\,
 - An element in the find list can be plain text or a Regular Expression
 - There are two functions in the replace list that you can use, "upper()" to transfrom the text to uppercase, and "lower()" to transfrom the text to lower case, these are only really useful while also using Regular Expression Groups
 
