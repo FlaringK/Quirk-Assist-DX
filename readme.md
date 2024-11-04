@@ -1,6 +1,6 @@
-# Qurik Assist DX (Download)[https://github.com/FlaringK/Quirk-Assist-DX/releases]
+# Qurik Assist DX [Download](https://github.com/FlaringK/Quirk-Assist-DX/releases)
 
-A plugin for (Better Discord)[https://betterdiscord.app/] that adds a quirk to your discord message after you press send! The DX stands for Discord X
+A plugin for [Better Discord](https://betterdiscord.app/) that adds a quirk to your discord message after you press send! The DX stands for Discord X
 
 This plugin edits the contents of your message before it's sent to discords servers, so it looks like plain text
 
@@ -12,7 +12,7 @@ This plugin edits the contents of your message before it's sent to discords serv
 Once you place the QuirkAssistDX.plugin.js file into your plugin folder and active it, if you open it's settings there will be 24 custom quirks for you to make. Each quirk has four fields for you to change, the first being preloaded with an example quirk. The four fields are:
 
 ### Proxy Tag
-This this is the proxy that your message will have to match for a quirk to be applied to it, akin to (PluralKit)[https://pluralkit.me/]. Often, these will be a pair of brackets, an emoji prefix, or something similar.
+This this is the proxy that your message will have to match for a quirk to be applied to it, akin to [PluralKit](https://pluralkit.me/). Often, these will be a pair of brackets, an emoji prefix, or something similar.
 
 You'll need to "pretend" you're proxying the word `text` - just the word itself, all-lowercase. This often gets a bit confusing, so here are a couple of examples with various patterns:
 
